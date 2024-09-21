@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import FetchData from './components/FetchData';
+import './styles/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1>Minha Aplicação</h1>
+        <p>Exibindo dados da API JSONPlaceholder</p>
       </header>
+
+      <main>
+        <FetchData />
+      </main>
+
+      <footer>
+        <p>&copy; {new Date().getFullYear()} Meu Site. Todos os direitos reservados.</p>
+      </footer>
     </div>
   );
-}
+};
 
 export default App;
