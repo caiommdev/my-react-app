@@ -10,6 +10,7 @@ const FetchData = () => {
     const [selectedUserId, setSelectedUserId] = useState(null);
     const [comments, setComments] = useState([]);
     const [selectedPostId, setSelectedPostId] = useState(null);
+	const [isGridView, setIsGridView] = useState(true);
 
     const fetchUsers = async () => {
       	const response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -53,6 +54,10 @@ const FetchData = () => {
             fetchComments(postId);
         }
     };
+
+	const toggleView = () => {
+		setIsGridView(!isGridView);
+	  };
 	
 	const handleBackToUsers = () => {
 		setSelectedUserId(null);
@@ -84,6 +89,9 @@ const FetchData = () => {
 				showUsers={showUsers}
 				showButton={showButton}
 			/>
+			<button onClick={toggleView} style={{ margin: '1rem' }}>
+				Alternar para {isGridView ? 'Lista' : 'Grade'}
+			</button>
 			<div style={gridStyle}>
 				{selectedUserId ? (
 				posts.map(post => (
@@ -104,7 +112,8 @@ const FetchData = () => {
 							key={user.id} 
 							name={user.name} 
 							catchPhrase={user.company.catchPhrase} 
-							onClick={() => handleUserClick(user.id)} 
+							onClick={() => handleUserClick(user.id)}
+							isGridView={isGridView}
 						/>
 					))
 				)}
