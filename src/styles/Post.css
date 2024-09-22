@@ -1,0 +1,17 @@
+.post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.93rem;
+    margin: 0.625rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    max-width: 20rem;
+}
+
+.post-card h3 {
+    margin: 0;
+}
+
+.post-card p {
+    color: #333;
+}
