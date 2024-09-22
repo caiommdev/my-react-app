@@ -73,13 +73,16 @@ const FetchData = () => {
         margin: '-10px',
     };
 
+	const showUsers = selectedUserId !== null;
+  	const showButton = selectedPostId !== null;
+
     return (
 		<div>
 			<NavBar 
 				onBackToUsers={handleBackToUsers}
 				onBackToPosts={handleBackToPosts}
-				showUsers={selectedPostId !== null}
-				showButton={selectedUserId !== null}
+				showUsers={showUsers}
+				showButton={showButton}
 			/>
 			<div style={gridStyle}>
 				{selectedUserId ? (

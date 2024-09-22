@@ -1,15 +1,21 @@
 import React from 'react';
+import '../styles/NavBar.css';
 
 const NavBar = ({ onBackToUsers, onBackToPosts, showUsers, showButton }) => {
   return (
-    <nav style={{ margin: '1rem 0', display: 'flex', justifyContent: 'space-between' }}>
-      {showUsers ? (
-        <button onClick={onBackToPosts}>Voltar para Posts</button>
-      ) : (
-        showButton ? (
-        <button onClick={onBackToUsers}>Voltar para Usuários</button>
-        ) : null
-      )}
+    <nav className="navbar">
+      <h1 className="navbar-title">Minha Aplicação</h1>
+      <div className="navbar-buttons">
+        {showButton ? (
+            <button className="navbar-button" onClick={onBackToPosts}>Ver Posts</button>
+        ) : (
+          <>
+            {showUsers ? (
+                <button className="navbar-button" onClick={onBackToUsers}>Voltar para Usuários</button>
+            ) : null}
+          </>
+        )}
+      </div>
     </nav>
   );
 };
