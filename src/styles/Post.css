@@ -1,6 +1,6 @@
 .post-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #e9e0d1;
+    border: 1px solid #68462b;
     border-radius: 0.5rem;
     padding: 0.93rem;
     margin: 0.625rem;
@@ -10,8 +10,9 @@
 
 .post-card h3 {
     margin: 0;
+    color: #33605a;
 }
 
 .post-card p {
-    color: #333;
+    color: #070001;
 }

@@ -87,6 +87,17 @@ const FetchData = () => {
         flex: '1 1 100%',
     };
 
+	const buttonStyle = {
+		backgroundColor: '#e9e0d1',
+		color: '#070001',
+		border: 'none',
+		borderRadius: '4px',
+		padding: '0.5rem 1rem',
+		margin: '1rem',
+		cursor: 'pointer',
+		transition: 'background-color 0.3s'
+	}
+
 	const showUsers = selectedUserId !== null;
   	const showButton = selectedPostId !== null;
 
@@ -98,7 +109,7 @@ const FetchData = () => {
 				showUsers={showUsers}
 				showButton={showButton}
 			/>
-			<button onClick={toggleView} style={{ margin: '1rem' }}>
+			<button onClick={toggleView} style={buttonStyle}>
 				Alternar para {isGridView ? 'Lista' : 'Grade'}
 			</button>
 			<div style={isGridView ? gridStyle : listStyle}>

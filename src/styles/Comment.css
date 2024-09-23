@@ -1,6 +1,6 @@
 .comment-card {
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
+    background-color: #e9e0d1;
+    border: 1px solid #68462b;
     border-radius: 0.5rem;
     padding: 1rem;
     margin: 0.5rem 0;
@@ -11,14 +11,24 @@
 .comment-name {
     font-weight: bold;
     margin-bottom: 0.5rem;
+    color: #33605a;
 }
 
 .comment-email {
-    color: #555;
+    color: #070001;
+    font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
-.comment-button{
+.comment-button {
     border-radius: 0.25rem;
-    background-color:#fff;
+    background-color: #91a398;
+    color: #070001;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.comment-button:hover {
+    background-color: #33605a;
 }
