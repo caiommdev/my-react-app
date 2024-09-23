@@ -9,16 +9,6 @@
     box-sizing: border-box;
 }
 
-.user-card.grid {
-    flex: 1 1 calc(33% - 20px); /* Layout de grade */
-  }
-  
-  .user-card.list {
-    flex-direction: column; /* Layout de lista */
-    display: flex; /* Certifique-se de que o layout de lista seja flexível */
-    align-items: center; /* Alinhamento vertical dos itens */
-  }
-
 .user-card h2 {
     font-size: 1.5rem;
     margin: 0;

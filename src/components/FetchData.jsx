@@ -71,11 +71,15 @@ const FetchData = () => {
 		setComments([]);
 	  };
 
-    const gridStyle = {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        margin: '-10px',
+	  const gridStyle = {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+        gap: '16px',
+        margin: '1rem',
+    };
+
+    const listStyle = {
+        flex: '1 1 100%',
     };
 
 	const showUsers = selectedUserId !== null;
@@ -92,7 +96,7 @@ const FetchData = () => {
 			<button onClick={toggleView} style={{ margin: '1rem' }}>
 				Alternar para {isGridView ? 'Lista' : 'Grade'}
 			</button>
-			<div style={gridStyle}>
+			<div style={isGridView ? gridStyle : listStyle}>
 				{selectedUserId ? (
 				posts.map(post => (
 					<div key={post.id}>

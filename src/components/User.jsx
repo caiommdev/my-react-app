@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/User.css';
 
-const User = ({ name, catchPhrase, onClick, isGridView }) => {
+const User = ({ name, catchPhrase, onClick }) => {
     return (
-      <div className={`user-card ${isGridView ? 'grid' : 'list'}`} onClick={onClick}>
+      <div className={`user-card`} onClick={onClick}>
         <h2>{name}</h2>
         <p>{catchPhrase}</p>
       </div>

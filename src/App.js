@@ -4,13 +4,13 @@ import './styles/App.css';
 
 const App = () => {
   return (
-    <div>
+    <div className='container'>
       <header>
         <h1>Minha Aplicação</h1>
         <p>Exibindo dados da API JSONPlaceholder</p>
       </header>
 
-      <main>
+      <main className='content'>
         <FetchData />
       </main>
 
