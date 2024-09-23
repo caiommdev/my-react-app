@@ -17,3 +17,8 @@
     color: #555;
     margin-bottom: 0.5rem;
 }
+
+.comment-button{
+    border-radius: 0.25rem;
+    background-color:#fff;
+}

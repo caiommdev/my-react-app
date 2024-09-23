@@ -57,21 +57,26 @@ const FetchData = () => {
 
 	const toggleView = () => {
 		setIsGridView(!isGridView);
-	  };
+	};
 	
 	const handleBackToUsers = () => {
 		setSelectedUserId(null);
 		setPosts([]);
 		setComments([]);
 		setSelectedPostId(null);
-	  };
+	};
 	
-	  const handleBackToPosts = () => {
+	const handleBackToPosts = () => {
 		setSelectedPostId(null);
 		setComments([]);
-	  };
+	};
 
-	  const gridStyle = {
+	const handleDeleteComment = (commentId) => {
+		setComments(comments.filter(comment => comment.id !== commentId));
+	  };
+	
+	
+	const gridStyle = {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
         gap: '16px',
@@ -106,7 +111,12 @@ const FetchData = () => {
 							onClick={() => handlePostClick(post.id)} 
 						/>
 						{selectedPostId === post.id && comments.map(comment => (
-							<Comment key={comment.id} name={comment.name} email={comment.email} body={comment.body} />
+							<Comment 
+							key={comment.id} 
+							name={comment.name} 
+							email={comment.email} 
+							body={comment.body}
+							onDelete={() => handleDeleteComment(comment.id)} />
 						))}
 					</div>
 				))
