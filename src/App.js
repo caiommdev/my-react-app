@@ -15,7 +15,7 @@ const App = () => {
       </main>
 
       <footer>
-        <p>&copy; {new Date().getFullYear()} Meu Site. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Exibindo dados da API JSONPlaceholder. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
